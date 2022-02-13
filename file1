@@ -1,1 +1,32 @@
-print("hello world")
+def drawFace(mood):
+    if mood == "sad":
+        print("__________")
+        print("|         |")
+        print("| O     O |")
+        print("|    ^    |")
+        print("|  _____  |")
+        print("| /     \ |")
+        print("|_________|")
+    if mood == "neutral":
+        print("__________")
+        print("|         |")
+        print("| O     O |")
+        print("|    ^    |")
+        print("|  _____  |")
+        print("|         |")
+        print("|_________|")
+    if mood == "happy":
+        print("__________")
+        print("|         |")
+        print("| O     O |")
+        print("|    ^    |")
+        print("| \_____/ |")
+        print("|         |")
+        print("|_________|")
+        
+
+
+def story():
+    
+
+if __name__ == "__main__":
