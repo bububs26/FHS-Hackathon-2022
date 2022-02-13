@@ -1,0 +1,50 @@
+No "" = Thoughts
+** = instructions
+"" = Dialogue
+Event3:
+
+
+
+if(event 2 bad option)
+  Bob meets with you after school(Location: outside of the school at the end of the day)
+  Bob: "What the heck is wrong with you?, Where did you go when I needed your help the most"
+  MC:  "My parents had called me away to help me with something"
+  Bob:  "Are you insane? You took some meaningless chore over assisting one of your friends out of a situation they needed help in?"
+  MC: Tears are clearly visably welling up in his eyes during his fit of rage, he trusted you, and you betrayed him, and even now, you have nothing to say to him.
+  Narrator: While the screaming continued, bully1, bully2, and bully3, walk outside of the school and see you 2 together, and shout:"
+  bully1: "What are you doing with that loser (mc)?" and stares in your direction.
+  *You are left with 2 options*
+  1. "What? I don't know this loser, I was just asking why he still bothered going to school." (-20 rep {literally abandonded him})
+  2. "What are YOU doing attacking him all the time? He is just trying to live normally and you can't leave him alone." (+10 rep)
+  If(Option 1):
+    bully2: "Now that we're on the same page, why dont you give us some more incriminating pictures?"
+    MC: walks over and joins their group, leaving your friend in the dust.
+  If(Option 2):
+    Bully3: "You losers are all the same, trying to help each other thinking you are each others knight in shining armor"
+    Narrator: After making a snotty remark, they walk away leaving you 2 alone again
+    Bob: "Im sorry, I didn't mean to attack you so much, I was frustrated from what happened yesterday, and I can see that you have good intentions"
+    MC: "Its no problem, Im sorry for not being able to answer your message yesterday"
+   arrator: You both walk away home, forgetting the problems that occured yesterday.
+if(event 2 good option)
+  (same scenario)
+  Bob: "Thanks for the help yesterday, I was able to recover my account and control the amount of people that saw the image"
+  MC: "No problem, I tried my hardest at making the password as secure as possible so it doesn't happen again"
+  Narrator: bully1, bully2, and bully3, walk outside of the school and see you 2 together, and shout:
+  bully1: "What are you doing with that loser (mc)?" and stares in your direction.
+  *You are left with 2 options*
+  1. "He isn't a loser, he is my friend and doesn't deserve to be treated this way" (+ 15)
+    bully2: "Pfft" 
+    Narrator: He sneers, and they turn and leave.
+  2. Stay Silent (-5 rep)
+    bully2: "Cat got your tongue? You losers all act the same, not enough courage to even fight back."
+    Narrator: He stares at both of you for a few seconds, and no one says anything. He sneers and they turn and leave.
+  if(option1)
+    Bob: "Thanks again, you really have saved me recently, I owe you one."
+    MC: "Don't mention it" You smilke, and both walk home.
+  if(option2)
+    Bob: "Why do they hate me so much? What did I do to deserve this"
+    MC: You are silent without a clue how to respond
+    Narrator: Despite this, you still both turn and walk home.
+
+
+      
