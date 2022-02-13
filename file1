@@ -1,5 +1,10 @@
 import time
 
+points = 0
+bully1 = "Chester"
+bully2 = "Patrick"
+bully3 = "Clarence"
+
 def drawFace(mood):
     '''
     used to display bob's emotions at certain points of the story.
@@ -28,6 +33,14 @@ def drawFace(mood):
         print("| \_____/ |")
         print("|         |")
         print("|_________|")
+    if mood == "angry":
+        print("__________")
+        print("| \     / |")
+        print("| O     O |")
+        print("|    ^    |")
+        print("|  _____  |")
+        print("| /     \ |")
+        print("|_________|")
         
 
 
@@ -36,22 +49,62 @@ def intro(): # the beginning of the story where the setting and characters are i
     drawFace(emotion)
     print("This is Bob. Bob is a student at high school.")
     time.sleep(2)
-    print("You are Bob's friend. One day, you see Bob surrounded by a group of kids.")
     
-def event1():
-    bully1 = "Chester"
-    bully2 = "Patrick"
-    bully3 = "Clarence"
+    
+def event1(points):
+    print("You are Bob's friend. One day, you are walking in the hallway when you see Bob surrounded by a group of kids.")
+    time.sleep(2)
+    '''
+    In this event, the player spots Bob being bullied by a group of kids. The player's decision to stop the bullying or not impacts the rest of the game.
+    '''
+    print()
     print("The kids surround Bob, towering over him.")
     time.sleep(1)
     print(bully1 + ": You're soooo stupid. You're even dumber than a rock!")
-    time.sleep(1)
+    time.sleep(2)
     print(bully2 + ": You must have been born on a highway, because that's where most accidents happen.")
-    time.sleep(1)
-    print(bully3 + ": ")
+    time.sleep(2)
+    print(bully3 + ": Your mamma so fat she has to wear 2 watches because she covers two time zones.")
+    print()
+    time.sleep(3)
+    emotion = "sad"
+    drawFace(emotion)
+    return points
     
+    
+def choice1(points):
+    c = input("Bob is very sad. You have three options:\n1. Tell the kids to stop bullying Bob.\n2. Join the kids and make fun of Bob\n3. Keep walking and ignore them.\nWhat do you choose? (1-3):")
+    if c == "1":
+        points += 10
+        print("You tell " + bully1 + ", " + bully2 + ", and " + bully3 + " to stay away from Bob. They look at you angrily and walk away.")
+        time.sleep(1)
+        emotion = "happy"
+        drawFace(emotion)
+        print("Bob: ")
+    elif c == "2":
+        points += -10
+        print("You walk towards the group and start insulting Bob.")
+        print()
+        time.sleep(1)
+        emotion = "angry"
+        drawFace(emotion)
+    elif c == "3":
+        points += -5
+        print("*You walk faster towards your class, and out of the corner of your eye you see Bob frowning at you.*")
+        emotion = "sad"
+        drawFace(emotion)
+    return points
 
+def event2(points):
+    '''
+    In this event,  
+    '''
+    print("*Bob's Picturegram account gets hacked and the hackers post some inappropriate pictures. Many of Bob's classmates see the pictures *")
+    return points
+    
+    
 if __name__ == "__main__":
     intro()
-    time.sleep(1)
-    event1()
+    event1(points)
+    choice1(points)
+    
