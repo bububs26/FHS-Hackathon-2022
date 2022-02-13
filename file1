@@ -1,10 +1,3 @@
-# -*- coding: utf-8 -*-
-"""
-Created on Tue Feb  8 20:51:54 2022
-
-@author: rkpam
-"""
-
 import time
 
 points = 0
@@ -136,11 +129,15 @@ def event2(points):
         print("\nYou ignore Bob's message. Later in the day, you see many Picturegram posts from students laughing at Bob.")
         points += -15
     elif choice == "2":
-        points = passwordMinigame(points)
+        points, good = passwordMinigame(points)
         emotion = "happy"
         drawFace(emotion)
         time.sleep(2)
-        print("Bob is thankful that you helped him protect his Picturegram account.")
+        if good:
+            print("Bob is thankful that you helped him protect his Picturegram account.")
+        else:
+            points += 5
+            print("You couldn't give Bob a better password, but at least you tried.")
         
     return points
 
@@ -154,13 +151,14 @@ def passwordMinigame(points):
         score = passCheck(passGuess)
         if score >= 4:
             print("\nGood job! Your password was good enough for Bob to use!")
+            good = True
             points += 10
             break
         else:
             print("\nUh oh. Your password is too weak for Bob's account. Try again.")
             tries -= 1
-
-    return points
+        
+    return points, good
 
 def passCheck(password):
     # check for: capital + lowercase letter, special character, certain length
@@ -282,6 +280,24 @@ def badchoice3(points):
         time.sleep(2)
     return points
 
+def goodend():
+    print("---------------------")
+    emotion = "happy"
+    drawFace(emotion)
+    time.sleep(2)
+    print("You've been a good friend to Bob. You made the right decisions for most of the story, and as a result, you and Bob are both happy.")
+    time.sleep(2)
+    print("It is important to take care of people close to you. Great job playing Bob's adventure!")
+    
+def badend():
+    print("---------------------")
+    emotion = "sad"
+    drawFace(emotion)
+    time.sleep(2)
+    print("You treated Bob very poorly throughout the story. Bob no longer considers you his friend.")
+    time.sleep(2)
+    print("When you are in a friendship, you should not be mean to your friends.")
+    
 if __name__ == "__main__":
     intro()
     points = event1(points)
@@ -290,5 +306,8 @@ if __name__ == "__main__":
         goodevent3(points)
     else:
         badevent3(points)
-    
+    if points >= 0:
+        goodend()
+    else:
+        badend()
     
