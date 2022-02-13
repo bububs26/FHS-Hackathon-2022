@@ -1,4 +1,9 @@
+import time
+
 def drawFace(mood):
+    '''
+    used to display bob's emotions at certain points of the story.
+    '''
     if mood == "sad":
         print("__________")
         print("|         |")
@@ -26,7 +31,27 @@ def drawFace(mood):
         
 
 
-def story():
+def intro(): # the beginning of the story where the setting and characters are introduced
+    emotion = "neutral"
+    drawFace(emotion)
+    print("This is Bob. Bob is a student at high school.")
+    time.sleep(2)
+    print("You are Bob's friend. One day, you see Bob surrounded by a group of kids.")
+    
+def event1():
+    bully1 = "Chester"
+    bully2 = "Patrick"
+    bully3 = "Clarence"
+    print("The kids surround Bob, towering over him.")
+    time.sleep(1)
+    print(bully1 + ": You're soooo stupid. You're even dumber than a rock!")
+    time.sleep(1)
+    print(bully2 + ": You must have been born on a highway, because that's where most accidents happen.")
+    time.sleep(1)
+    print(bully3 + ": ")
     
 
 if __name__ == "__main__":
+    intro()
+    time.sleep(1)
+    event1()
